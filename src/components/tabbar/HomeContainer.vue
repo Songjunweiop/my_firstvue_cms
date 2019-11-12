@@ -15,16 +15,16 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <router-link to="/home/">
+        <router-link to="/home/photolist">
           <img src="../../images/2.png" alt="">
-          <div class="mui-media-body">商品购买</div>
+          <div class="mui-media-body">图片分享</div>
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/goodlist">
           <img src="../../images/3.png" alt="">
           <div class="mui-media-body">留言反馈</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">

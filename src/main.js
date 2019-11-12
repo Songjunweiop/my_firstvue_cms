@@ -5,10 +5,11 @@ console.log("ok");//1.git init   2.git add .  3.git status    4.
 // import {Header} from 'mint-ui'
 // import 'mint-ui/lib/style.css'//
 // Vue.component(Header.name,Header)
-import { Swipe, SwipeItem,Button } from 'mint-ui';
+import { Swipe, SwipeItem,Button,Lazyload } from 'mint-ui';
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Button.name, Button);
+Vue.use(Lazyload)
 //导入Mint-UI所有组件
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'//
@@ -36,8 +37,9 @@ Vue.filter('dateFormat',function(dataStr,pattern="YYYY-MM-DD HH-mm-ss"){
 //  2.1 导入vue-resource
 import VueResource from 'vue-resource'
 Vue.use(VueResource)  //2.2  安装 vue-resource
-//设置请求的根路径
-Vue.http.options.root = 'http://www.liulongbin.top:3005'
+Vue.http.options.root = 'http://www.liulongbin.top:3005'//设置请求的根路径
+Vue.http.options.emulateJSON = true;
+
 
 import Vue from 'vue'
 //导入 App 根组件
