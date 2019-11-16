@@ -21,9 +21,9 @@
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <router-link to="/home/goodlist">
+        <router-link to="/home/goodslist">
           <img src="../../images/3.png" alt="">
-          <div class="mui-media-body">留言反馈</div>
+          <div class="mui-media-body">商品列表</div>
         </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">

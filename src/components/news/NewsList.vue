@@ -2,7 +2,9 @@
   <div>
     <ul class="mui-table-view">
       <li class="mui-table-view-cell mui-media" v-for="item in newslist" :key="item.id">
-        <router-link :to="'/home/newsinfo/' + item.id">
+        <!-- 设置点击进入info的页面的id值 -->
+        <router-link :to="'/home/newsinfo/' + item.id">  
+
           <img class="mui-media-object mui-pull-right" :src="item.img_url" />
           <div class="mui-media-body">
             {{item.title}}

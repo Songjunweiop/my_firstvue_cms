@@ -14,6 +14,11 @@ import Photolist from './components/photos/Photolist.vue'
 import PhotoInfo from './components/photos/PhotoInfo.vue'
 //导入商品列表
 import GoodsList from './components/goods/GoodList.vue'
+import GoodsInfo from './components/goods/GoodsInfo.vue'
+//导入商品信息
+import GoodsDesc from './components/goods/GoodsDesc.vue'
+import GoodsComment from './components/goods/GoodsComment.vue'
+
 
 //-03 创建路由对象
 var router = new VueRouter({
@@ -27,7 +32,10 @@ var router = new VueRouter({
         { path: '/home/newsinfo/:id', component: NewsInfo },
         { path: '/home/photolist', component: Photolist },
         { path: '/home/photoinfo/:id', component: PhotoInfo },
-        { path: './home/goodslist', component: GoodsList },
+        { path: '/home/goodslist', component: GoodsList },
+        { path: '/home/goodsinfo/:id', component: GoodsInfo },
+        { path: '/home/goodsdesc/:id', component: GoodsDesc },
+        { path: '/home/goodscomment/:id', component: GoodsComment },
     ],
     linkActiveClass: 'mui-active'
 })

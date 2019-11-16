@@ -13,7 +13,7 @@
 </template>
 <script>
 
-//1.导入子组件
+//1.导入评论的子组件
 import comment from '../subcomponents/comment.vue'
 
 export default{
