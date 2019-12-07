@@ -68,7 +68,7 @@ export default {
       lunbotu: [],
       goodsinfo: {},
       ballflag: false, //控制小球隐藏和显示
-      selectedCount:1,  //保存用户选中的商品数量
+      selectedCount: 1 //保存用户选中的商品数量
     };
   },
   created() {
@@ -102,7 +102,16 @@ export default {
     },
     addToShopCar() {
       //添加到购物车
+      //拼接出一个要保存到store中的car数组里的商品对象信息
       this.ballflag = !this.ballflag;
+      var goodsinfo = {
+        id: this.id,
+        count: this.selectedCount,
+        price: this.goodsinfo.sell_price,
+        selected: true
+      }
+      //调用store中的mutations来将商品加入到购物车
+      this.$store.commit("addToCar",goodsinfo);
     },
     beforeEnter(el) {
       el.style.transform = "translate(0,0)";
@@ -116,8 +125,8 @@ export default {
       const badgePosition = document
         .getElementById("badge")
         .getBoundingClientRect();
-      const xDist =badgePosition.left- ballPosition.left;
-      const yDist = badgePosition.top - ballPosition.top;  
+      const xDist = badgePosition.left - ballPosition.left;
+      const yDist = badgePosition.top - ballPosition.top;
       el.style.transform = `translate(${xDist}px,${yDist}px)`;
       el.style.transition = "all 1s cubic-bezier(.4,-0.3,1,.68)";
       done();
@@ -125,12 +134,11 @@ export default {
     afterEnter(el) {
       this.ballflag = !this.ballflag;
     },
-    getSelectedCount(count){
+    getSelectedCount(count) {
       //当子组件把选中的数量传递给父组件的时候，把选中的值保存到data上
-      this.selectedCount= count; //接受子组件传过来的值
+      this.selectedCount = count; //接受子组件传过来的值
       console.log(this.selectedCount);
     }
-
   },
   components: {
     numbox //注册一下子组件
