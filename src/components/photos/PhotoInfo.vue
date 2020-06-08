@@ -1,7 +1,8 @@
 <template>
     <div>
-        图片详情
+        图片详情<div></div>
     </div>
+    
 </template>
 <script>
 export default {
