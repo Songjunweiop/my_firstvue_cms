@@ -1,9 +1,9 @@
 ## 项目开始
     use:
         node: 12.x
-        `nvm use 12.x`
+        nvm use 12.x
     start:
-        `npm run dev`
+        npm run dev
 
 ### 制作首页App组件
     1. 完成 Header 区域,使用的是 Mint-UI 中的Header组件
